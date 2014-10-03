@@ -11,13 +11,17 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
 
 	<style type="text/css">
-	@import url(
-	https://fonts.googleapis.com/css?family=Lato:400,700
-);
+	@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
 body {
 	background: #fff;
 	font-family: Lato, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
 	margin: 0 0 80px;
+}
+b, strong {
+font-weight: 400;
 }
 a {
 	color: #2ecc71;
@@ -38,7 +42,23 @@ h1,
 h2,
 h3,
 h4 {
-	margin-top: 0
+	margin-top: 0;
+	font-weight: 400;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.2em;
+}
+.date {
+	font-weight: 400;
 }
 section {
 	margin-top: 30px;
@@ -53,7 +73,7 @@ li:before {
 	font: 13px Octicons;
 	margin-top: 6px;
 	margin-left: -20px;
-	opacity: .1;
+	opacity: .2;
 	position: absolute;
 }
 blockquote {
@@ -62,12 +82,11 @@ blockquote {
 }
 em {
 	color: #95a5a6;
-	font-weight: normal;
+	font-weight: 700;
 	font-style: normal;
 }
 h4 span:first-child {
 	color: #000;
-	font-weight: bold;
 }
 .container {
 	max-width: 750px;
@@ -89,12 +108,13 @@ h4 span:first-child {
 }
 #header h2 {
 	color: #647687;
-	font-size: 24px;
+	font-size: 1.5em;
+	font-weight: 300;
 }
 #content h3 {
 	color: #F3AE4E;
-	font-size: 26px;
 	margin-top: -4px;
+	font-weight: 400;
 }
 #content aside {
 	text-align: right;
@@ -105,11 +125,11 @@ h4 span:first-child {
 }
 #work .position,
 #volunteer .position {
-	font-weight: bold;
+	font-weight: 400;
 	margin-bottom: 8px;
 }
 #education .area {
-	font-weight: bold;
+	font-weight: 700;
 }
 #education .area:before {
 	content: "\f0d7";
@@ -136,7 +156,7 @@ h4 span:first-child {
 #skills .keywords li, #education .courses li {
 	display: inline-block;
 	padding: 0px 6px;
-	margin: 3px 2px;
+	margin: 3px 4px 4px 0;
 	border: 1px solid #ccc;
 	line-height: 1.5em;
 	border-radius: 1px;
@@ -172,20 +192,40 @@ h4 span:first-child {
 		margin-bottom: 0px;
 	}
 	#content aside {
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		padding-right: 0;
 		text-align: left;
 	}
 	#publications .website a:before {
 		content: "View publication";
 	}
+	.work-item {
+		padding-bottom: 10px
+	}
+	.work-item:last-child {
+		padding-bottom: 0;
+	}
 }
 @media (max-width: 480px) {
+	#content {
+		padding: 15px;
+	}
+	.container {
+		padding: 0 15px;
+	}
 	h1 {
-		font-size: 26px;
+		font-size: 1.5em;
+	}
+	h2 {
+		font-size: 1.4em;
+	}
+	h3 {
+		font-size: 1.3em;
+	}
+	h4 {
+		font-size: 1em;
 	}
 	.date {
-		font-size: 14px;
 		margin-bottom: 5px;
 	}
 	.strike-through span:first-child {
@@ -195,17 +235,40 @@ h4 span:first-child {
 		display: block;
 	}
 	#header {
-		margin-bottom: 10px;
-		padding: 40px 0;
+		margin-bottom: 0px;
+		padding: 20px 0;
+	}
+	#header h2 {
+		font-size: 1.2em;
 	}
 	#actions {
 		display: none;
 	}
+	section {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
 }
 @media print {
+	body {
+		margin: 0;
+		font-size: 12px
+	}
 	#header {
 		padding: 0;
-		margin-bottom: 10px;
+		margin-bottom: 0px;
+	}
+	#content aside {
+		margin-bottom: 0px;
+	}
+	section {
+		margin-top: 25px;
+	}
+	.col-sm-6 {
+		margin-bottom: 0px;
+	}
+	.strike-through {
+		border: none;
 	}
 }
 
@@ -244,12 +307,6 @@ h4 span:first-child {
 				<strong>Phone</strong>
 				<div class="phone">+33 6 15 19 51 62</div>
 			</div>
-			<div class="col-sm-6">
-				<strong>Website</strong>
-				<div class="website">
-					<a href="https://github.com/pascalmercier">https://github.com/pascalmercier</a>
-				</div>
-			</div>
 			</div>
 		</div>
 	</section>
@@ -273,7 +330,7 @@ h4 span:first-child {
 					</strong>
 					<div class="username">
 						<div class="url">
-							<a href="https://www.linkedin.com/in/mercierpascal">mercierpascal</a>
+							<a href="https://www.linkedin.com/in/mercierpascal" target="_blank">mercierpascal</a>
 						</div>
 					</div>
 				</div>
@@ -283,7 +340,17 @@ h4 span:first-child {
 					</strong>
 					<div class="username">
 						<div class="url">
-							<a href="https://twitter.com/pascal_mercier">pascal_mercier</a>
+							<a href="https://twitter.com/pascal_mercier" target="_blank">pascal_mercier</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<strong class="network">
+						Github
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="https://github.com/pascalmercier" target="_blank">pascalmercier</a>
 						</div>
 					</div>
 				</div>
@@ -297,7 +364,7 @@ h4 span:first-child {
 		</aside>
 		<div class="col-sm-9">
 			<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-12 work-item">
 				<h4 class="strike-through">
 					<span>Salesforce.com – Paris, France</span>
 					<span class="date">
@@ -315,12 +382,13 @@ h4 span:first-child {
 				</div>
 				<h4>Highlights</h4>
 				<ul class="highlights">
-					<li class="bullet">Facilitation of strategic innovation workshops</li>
-					<li class="bullet">Design and prototype customer visions drafted during workshops</li>
-					<li class="bullet">Design and build of a collaboration iOS app to support executive events</li>
+					<li class="bullet">Facilitation of strategic innovation workshops.</li>
+					<li class="bullet">Design and prototype the customers&#x27; strategic visions crafted during workshops.</li>
+					<li class="bullet">Design and build a native iOS app connected to a Force.com back-end to improve collaboration of the Salesforce executives attending the WEF annual meeting at Davos.</li>
+					<li class="bullet">Development of responsive websites on Force.com and Heroku to enable the sales organisation with consistent business data and UX/UI guidelines.</li>
 				</ul>
 			</div>
-			<div class="col-sm-12">
+			<div class="col-sm-12 work-item">
 				<h4 class="strike-through">
 					<span>Salesforce.com – Dublin, Ireland</span>
 					<span class="date">
@@ -338,12 +406,12 @@ h4 span:first-child {
 				</div>
 				<h4>Highlights</h4>
 				<ul class="highlights">
-					<li class="bullet">Development of an Internal iOS apps distribution platform</li>
-					<li class="bullet">Build and delivery of Salesforce events stage demos</li>
-					<li class="bullet">Direction and creation of demo visuals for promotional videos</li>
+					<li class="bullet">Development of a secure iOS apps distribution platform in Ruby on Heroku and Amazon Web Services for internal use.</li>
+					<li class="bullet">Build and delivery of Salesforce events stage demos to showcase the art of possible.</li>
+					<li class="bullet">Direction and creation of demo visuals for promotional videos.</li>
 				</ul>
 			</div>
-			<div class="col-sm-12">
+			<div class="col-sm-12 work-item">
 				<h4 class="strike-through">
 					<span>Thales Alenia Space</span>
 					<span class="date">
@@ -357,13 +425,13 @@ h4 span:first-child {
 					UX/UI Developer
 				</div>
 				<div class="summary">
-					<p>Research and development in user experience for ground stations of satelites command centers. The key challenge was to move from mainframe infrastructures to distributed and web-service based applications.</p>
+					<p>R&amp;D in user experience for ground stations of satellites command centers. The key challenges were to move from mainframe infrastructures to distributed and web-service based applications and step-up the usability of the UIs.</p>
 				</div>
 				<h4>Highlights</h4>
 				<ul class="highlights">
-					<li class="bullet">Research in user needs and technical specificities</li>
-					<li class="bullet">Build prototypes to integrate a Java/JEE back-end with Adobe Flex and Google GWT front-ends</li>
-					<li class="bullet">Creation of a internally shared icons bank to minimise the use of fraudulent resources and standardize overall look &amp; feel</li>
+					<li class="bullet">Research in user needs and technical specificities.</li>
+					<li class="bullet">Build prototypes to integrate a Java/JEE back-end with Adobe Flex and Google GWT front-ends.</li>
+					<li class="bullet">Construction of a cross-department icons library to minimise the use of fraudulent resources and standardize overall look &amp; feel.</li>
 				</ul>
 			</div>
 			</div>
@@ -394,9 +462,9 @@ h4 span:first-child {
 				</div>
 				<h4>Highlights</h4>
 				<ul class="highlights">
-					<li class="bullet">Deployed a complete Salesforce.com solution</li>
-					<li class="bullet">Provided extensive training for 10 users</li>
-					<li class="bullet">Improved collaboration and assets management</li>
+					<li class="bullet">Deployement of a end-to-end Salesforce solution.</li>
+					<li class="bullet">Provide extensive training for 10 users.</li>
+					<li class="bullet">Improve collaboration and assets management.</li>
 				</ul>
 			</div>
 			</div>
@@ -474,7 +542,7 @@ h4 span:first-child {
 					<strong>Salesforce.com</strong>
 				</div>
 				<div class="summary">
-					System and method for updating infographics based on multiple social networks
+					System and method for updating infographics based on multiple social networks.<br />The initial project was launched as a public Facebook app developed in Ruby and hosted on Heroku to pull social networks data via the Radian6 API in order to predict results of the french presidential elections in 2012. The concept has been leveraged in very diverse contexts since then.
 				</div>
 			</div>
 			</div>
@@ -495,11 +563,27 @@ h4 span:first-child {
 					</h4>
 				</div>
 				<ul class="keywords">
-					<li>Force.com</li>
-					<li>Heroku</li>
-					<li>Hybrid/Native iOS apps</li>
+					<li>Responsive HTML/CSS</li>
+					<li>Visualforce/Apex</li>
+					<li>APIs</li>
+					<li>Ruby</li>
+					<li>Ruby on Rails</li>
+					<li>Sinatra</li>
+					<li>Node.js</li>
+					<li>Java/JEE</li>
+					<li>C/C++</li>
+					<li>Adobe Flex/Actionscript</li>
+					<li>XML/XSL</li>
+					<li>SVG</li>
+					<li>Apache Cordova</li>
+					<li>Swift</li>
 					<li>Radian6</li>
-					<li>Prototyping frameworks</li>
+					<li>Javscript MVC frameworks</li>
+					<li>Oracle SQL</li>
+					<li>PostgreSQL</li>
+					<li>SQLite</li>
+					<li>CouchDB</li>
+					<li>Version control</li>
 				</ul>
 			</div>
 			<div class="col-sm-12">
@@ -510,8 +594,8 @@ h4 span:first-child {
 				</div>
 				<ul class="keywords">
 					<li>Workshop facilitation</li>
-					<li>Photoshop</li>
-					<li>Sketch</li>
+					<li>Adobe Photoshop</li>
+					<li>Sketch app</li>
 					<li>Interactive prototypes</li>
 				</ul>
 			</div>
