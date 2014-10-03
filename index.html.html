@@ -11,17 +11,17 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
 
 	<style type="text/css">
-	@import url(
-	@import url(http://fonts.googleapis.com/css?family=Raleway:500,400,100);
-);
+	@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
 body {
 	background: #fff;
-	font-family: Raleway, sans-serif;
-	font-weight: 100;
+	font-family: Lato, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
 	margin: 0 0 80px;
 }
 b, strong {
-font-weight: 500;
+font-weight: 400;
 }
 a {
 	color: #2ecc71;
@@ -43,7 +43,19 @@ h2,
 h3,
 h4 {
 	margin-top: 0;
-	font-weight: 500;
+	font-weight: 400;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.2em;
 }
 .date {
 	font-weight: 400;
@@ -70,12 +82,11 @@ blockquote {
 }
 em {
 	color: #95a5a6;
-	font-weight: 500;
+	font-weight: 700;
 	font-style: normal;
 }
 h4 span:first-child {
 	color: #000;
-	font-weight: 500;
 }
 .container {
 	max-width: 750px;
@@ -97,12 +108,11 @@ h4 span:first-child {
 }
 #header h2 {
 	color: #647687;
-	font-size: 24px;
-	font-weight: 400;
+	font-size: 1.5em;
+	font-weight: 300;
 }
 #content h3 {
 	color: #F3AE4E;
-	font-size: 24px;
 	margin-top: -4px;
 	font-weight: 400;
 }
@@ -115,11 +125,11 @@ h4 span:first-child {
 }
 #work .position,
 #volunteer .position {
-	font-weight: 500;
+	font-weight: 400;
 	margin-bottom: 8px;
 }
 #education .area {
-	font-weight: 500;
+	font-weight: 700;
 }
 #education .area:before {
 	content: "\f0d7";
@@ -189,13 +199,33 @@ h4 span:first-child {
 	#publications .website a:before {
 		content: "View publication";
 	}
+	.work-item {
+		padding-bottom: 10px
+	}
+	.work-item:last-child {
+		padding-bottom: 0;
+	}
 }
 @media (max-width: 480px) {
+	#content {
+		padding: 15px;
+	}
+	.container {
+		padding: 0 15px;
+	}
 	h1 {
-		font-size: 26px;
+		font-size: 1.5em;
+	}
+	h2 {
+		font-size: 1.4em;
+	}
+	h3 {
+		font-size: 1.3em;
+	}
+	h4 {
+		font-size: 1em;
 	}
 	.date {
-		font-size: 14px;
 		margin-bottom: 5px;
 	}
 	.strike-through span:first-child {
@@ -205,16 +235,24 @@ h4 span:first-child {
 		display: block;
 	}
 	#header {
-		margin-bottom: 10px;
-		padding: 40px 0;
+		margin-bottom: 0px;
+		padding: 20px 0;
+	}
+	#header h2 {
+		font-size: 1.2em;
 	}
 	#actions {
 		display: none;
+	}
+	section {
+		margin-top: 20px;
+		margin-bottom: 30px;
 	}
 }
 @media print {
 	body {
 		margin: 0;
+		font-size: 12px
 	}
 	#header {
 		padding: 0;
@@ -228,6 +266,9 @@ h4 span:first-child {
 	}
 	.col-sm-6 {
 		margin-bottom: 0px;
+	}
+	.strike-through {
+		border: none;
 	}
 }
 
@@ -323,7 +364,7 @@ h4 span:first-child {
 		</aside>
 		<div class="col-sm-9">
 			<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-12 work-item">
 				<h4 class="strike-through">
 					<span>Salesforce.com – Paris, France</span>
 					<span class="date">
@@ -344,10 +385,10 @@ h4 span:first-child {
 					<li class="bullet">Facilitation of strategic innovation workshops.</li>
 					<li class="bullet">Design and prototype the customers&#x27; strategic visions crafted during workshops.</li>
 					<li class="bullet">Design and build a native iOS app connected to a Force.com back-end to improve collaboration of the Salesforce executives attending the WEF annual meeting at Davos.</li>
-					<li class="bullet">Development of responsive websites on Force.com and Heroku to enable the sales organiastion with consistent business data and UX/UI guidelines.</li>
+					<li class="bullet">Development of responsive websites on Force.com and Heroku to enable the sales organisation with consistent business data and UX/UI guidelines.</li>
 				</ul>
 			</div>
-			<div class="col-sm-12">
+			<div class="col-sm-12 work-item">
 				<h4 class="strike-through">
 					<span>Salesforce.com – Dublin, Ireland</span>
 					<span class="date">
@@ -370,7 +411,7 @@ h4 span:first-child {
 					<li class="bullet">Direction and creation of demo visuals for promotional videos.</li>
 				</ul>
 			</div>
-			<div class="col-sm-12">
+			<div class="col-sm-12 work-item">
 				<h4 class="strike-through">
 					<span>Thales Alenia Space</span>
 					<span class="date">
