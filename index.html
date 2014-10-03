@@ -1,15 +1,15 @@
 <!doctype html>
 <html>
 	<head>
-	
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
+
 	<title>Pascal Mercier</title>
-	
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-	
+
 	<style type="text/css">
 	@import url(
 	https://fonts.googleapis.com/css?family=Lato:400,700
@@ -24,7 +24,7 @@ a {
 }
 a:focus,
 a:hover {
-	color: #f1c40f;
+	color: #F3AE4E;
 	text-decoration: none;
 }
 p {
@@ -77,22 +77,22 @@ h4 span:first-child {
 	margin-bottom: 10px;
 }
 .col-sm-12 h4 {
-	margin-top: 12px; 
+	margin-top: 12px;
 }
 .col-sm-12 + .col-sm-12 {
 	margin-top: 30px;
 }
 #header {
-	background: #f4f6f6;
+	background: #F0F1F2;
 	padding: 50px 0;
 	margin-bottom: 30px;
 }
 #header h2 {
-	color: #95a5a6;
+	color: #647687;
 	font-size: 24px;
 }
 #content h3 {
-	color: #f1c40f;
+	color: #F3AE4E;
 	font-size: 26px;
 	margin-top: -4px;
 }
@@ -125,6 +125,22 @@ h4 span:first-child {
 }
 #publications .website a:before {
 	content: attr(href);
+}
+#skills .keywords, #education .courses {
+	padding: 0;
+	margin: 0;
+}
+#skills .keywords li:before, #education .courses li:before {
+	content: "";
+}
+#skills .keywords li, #education .courses li {
+	display: inline-block;
+	padding: 0px 6px;
+	margin: 2px;
+	border: 1px solid #ccc;
+	line-height: 1.5em;
+	border-radius: 1px;
+	background-color: #fafafa
 }
 
 @media (min-width: 480px) {
@@ -177,7 +193,7 @@ h4 span:first-child {
 	}
 	.strike-through span {
 		display: block;
-	}	
+	}
 	#header {
 		margin-bottom: 10px;
 		padding: 40px 0;
@@ -188,10 +204,10 @@ h4 span:first-child {
 }
 
 	</style>
-	
+
 	</head>
 	<body>
-	
+
 	<header id="header">
 		<div class="container">
 			<div class="row">
@@ -216,7 +232,7 @@ h4 span:first-child {
 			<div class="row">
 			<div class="col-sm-6">
 				<strong>Email</strong>
-				<div class="email">mercier.pas@gmail.com</div>
+				<div class="email"><a href="mailto:mercier.pas@gmail.com" target="_blank">mercier.pas@gmail.com</a></div>
 			</div>
 			<div class="col-sm-6">
 				<strong>Phone</strong>
@@ -279,7 +295,7 @@ h4 span:first-child {
 				<h4 class="strike-through">
 					<span>Salesforce.com – Paris, France</span>
 					<span class="date">
-						2012-10-01 — 1970-01-01
+						2012-10-01 — Now
 					</span>
 				</h4>
 				<div class="website pull-right">
@@ -380,7 +396,7 @@ h4 span:first-child {
 			</div>
 		</div>
 	</section>
-	
+
 	<section id="education" class="row">
 		<aside class="col-sm-3">
 			<h3>Education</h3>
@@ -432,7 +448,7 @@ h4 span:first-child {
 			</div>
 		</div>
 	</section>
-	
+
 	<section id="awards" class="row">
 		<aside class="col-sm-3">
 			<h3>Awards</h3>
@@ -458,17 +474,19 @@ h4 span:first-child {
 			</div>
 		</div>
 	</section>
-	
-	
+
+
 	<section id="skills" class="row">
 		<aside class="col-sm-3">
 			<h3>Skills</h3>
 		</aside>
 		<div class="col-sm-9">
 			<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-12">
 				<div class="name">
-					<h4>Technical</h4>
+					<h4 class="strike-through">
+						<span>Technical</span>
+					</h4>
 				</div>
 				<ul class="keywords">
 					<li>Force.com</li>
@@ -478,9 +496,11 @@ h4 span:first-child {
 					<li>Prototyping tools</li>
 				</ul>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-12">
 				<div class="name">
-					<h4>UX/UI Design</h4>
+					<h4 class="strike-through">
+						<span>UX/UI Design</span>
+					</h4>
 				</div>
 				<ul class="keywords">
 					<li>Sketch</li>
@@ -517,9 +537,23 @@ h4 span:first-child {
 		</div>
 	</section>
 
-	
+
+	<section id="references" class="row">
+		<aside class="col-sm-3">
+			<h3>References</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+				<div class="col-sm-12">
+					<div>
+						<strong>Upon request</strong>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	</div>
-	
+
 	</body>
 </html>
