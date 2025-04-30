@@ -1,0 +1,699 @@
+:root {
+	--color-deep-navy-blue: #283593;
+	--color-vibrant-orange: #FF7043;
+	--color-lively-green: #43A047;
+	--color-light-gray: #f5f5f5;
+	--color-dark-gray: #212121;
+	
+	--color-vibrant-orange--darken: #FF4D42;
+	--color-vibrant-orange--lighten: #FF8F42;
+	--color-light-gray--translucent: rgba(245, 245, 245, .7);
+	
+	--size-body-width: 58rem;
+}
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html, body {
+	background-color: var(--color-light-gray);
+  color: var(--color-dark-gray);
+	font-size: 1em;
+  line-height: 1.4;
+	font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: 0%;
+	vertical-align: middle;
+	scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+
+h1, h2, h3, h4, h5 {
+	font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+	font-weight: 300;
+	color: var(--color-deep-navy-blue);
+	display: block;
+	margin: 0;
+}
+
+h1 {
+	font-size: 3rem;
+}
+h1 > strong {
+	font-weight: 500;
+}
+h2 {
+	font-size: 2rem;
+	font-weight: 300;
+}
+h2 > strong {
+	font-weight: 500;
+}
+h3 {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+h3 > strong {
+	font-weight: 500;
+}
+h3 span {
+	color: var(--color-lively-green);
+}
+h4 {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+body > section,
+body > footer {
+	padding: 6rem 1.5rem;
+}
+body > section:first-of-type {
+	padding-top: 9.875rem;
+}
+
+body > section > *,
+body > footer > section {
+	width: 100%;
+	max-width: var(--size-body-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p {
+	margin: 0 0 1rem 0;
+}
+
+p.hero-p {
+	line-height: 1.8;
+	margin-bottom: 1.5rem;
+}
+p > strong {
+	font-weight: 600;
+}
+.button {
+	display: flex;
+	inline-size: fit-content;
+	cursor: pointer;
+	box-sizing: border-box;
+	align-items: center;
+	border: 0;
+	background: var(--color-vibrant-orange);
+	color: var(--color-dark-gray);
+	padding: .75rem 1.5rem;
+	border-radius: 2rem;
+	font-weight: 500;
+	justify-content: center;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+	text-decoration: none;
+	transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.button:hover,
+.button:focus { 
+	background: var(--color-vibrant-orange--lighten);
+}
+.button:active {
+  background: var(--color-vibrant-orange--darken);
+}
+
+
+/* Navigation */
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	justify-content: space-between;
+	padding: 1rem 1.5rem;
+	background-color: var(--color-light-gray--translucent);
+	backdrop-filter: blur(8px);
+  transition: top .35s;
+  z-index: 10;
+}
+.nav,
+.nav .menu{
+	display: flex;
+	align-items: center;
+}
+.nav .menu {
+	column-gap: 1.5rem;
+}
+
+.nav #menu-toggle {
+	display: none;
+}
+
+.menu-toggle__bar1, .menu-toggle__bar2, .menu-toggle__bar3 {
+	width: 21px;
+	height: 3px;
+	background-color: var(--color-dark-gray);
+	margin: 4px 0;
+	transition: 0.3s;
+}
+.menu-toggle--open .menu-toggle__bar1 {
+	transform: translate(0, 7px) rotate(-45deg);
+}
+.menu-toggle--open .menu-toggle__bar2 {
+	opacity: 0;
+}
+.menu-toggle--open .menu-toggle__bar3 {
+	transform: translate(0, -7px) rotate(45deg);
+}
+
+.logo,
+.nav .nav-item {
+	font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+	font-weight: 400;
+	color: var(--color-deep-navy-blue);
+	text-decoration: none;
+	line-height: normal;
+
+}
+.nav .nav-item:hover {
+	text-decoration-style: dotted;
+	text-decoration-color: var(--color-deep-navy-blue);
+	text-decoration-line: underline;
+	text-underline-offset: .5rem;
+}
+.nav .nav-item:last-child {
+  margin-left: auto;
+}
+
+.logo {
+	margin-right: auto;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.logo.dark-bg {
+	color: var(--color-light-gray);
+}
+
+#contact {
+	background-color: #FF7043;
+}
+#contact > * {
+	color: #212121;
+}
+
+.social-handles {
+	display: flex;
+	justify-content: center;
+	grid-gap: 2rem;
+	flex-wrap: wrap;
+}
+.social-handles .button {
+	background-color: var(--color-deep-navy-blue);
+	color: var(--color-light-gray);
+}
+.social-handles .button::before {
+	content: '';
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: .5rem;
+}
+.social-handles .button.email::before {
+	background-image: url(../img/social/envelope_2709-fe0f.png);
+}
+.social-handles .button.linkedin::before {
+	background-image: url(../img/social/linkedin.png);
+}
+
+.categories {
+	display: flex;
+	grid-gap: .5rem;
+	font-size: .875rem;
+	font-weight: 500;
+	flex-wrap: wrap;
+}
+.categories .category-item {
+	padding: .375rem 1rem;
+	border-radius: 2rem;
+}
+.categories.light-bg .category-item {
+	color: var(--color-lively-green);
+	border: 1px solid var(--color-lively-green);
+}
+.categories.dark-bg .category-item {
+	color: var(--color-light-gray);
+	background-color: var(--color-lively-green);
+}
+
+footer {
+	background-color: var(--color-dark-gray);
+}
+footer > section {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+footer a,
+footer p {
+	color: var(--color-light-gray);
+	text-decoration: none;
+	font-size: .875rem;
+	margin: 0 0 .5rem 0;
+	display: block;
+}
+footer .info p {
+	margin: 0;
+	font-style: italic;
+}
+footer .social > a,
+footer .nav-bis > a {
+	text-align: right;
+}
+
+
+
+/***********************************
+		RESPONSIVE MEDIA QUERIES
+*********************************/
+
+@media only screen and (width < 48rem) {
+	body > section:first-of-type {
+		padding-top: 7.875rem;
+	}
+	body > section, body > footer {
+		padding: 4rem 1.5rem;
+	}
+	h1 {
+		font-size: 7.3vw;
+	}
+	h2 {
+		font-size: 1.6rem;
+	}
+	h3 {
+		font-size: 1.2rem;
+	}
+	.nav {
+		display: block;
+	}
+	.nav .menu {
+		float: right;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		grid-row-gap: 1rem;
+	}
+	.nav .nav-item {
+		display: none;
+	}
+	.nav .nav-item:first-of-type {
+		padding-top: 1rem;
+	}
+	.nav a#menu-toggle {
+		display: block;
+	}
+	.nav.nav--open #menu-toggle {
+		position: absolute;
+		right: 1.5rem;
+		top: 1rem;
+	}
+	.nav.nav--open a {
+		float: none;
+		display: block;
+	}
+	
+	footer > section {
+		flex-wrap: wrap-reverse;
+		grid-row-gap: 3rem;
+	}
+	footer .social > a {
+		text-align: left;
+	}
+	footer .info {
+		width: 100%;
+	}
+	footer .info > * {
+		text-align: center;
+	}
+}
+
+
+/********************************
+	HELPERS 
+********************************/
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+
+.m_vertical-s {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.m_horizontal-s {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+.m_top-s {
+	margin-top: 1rem;
+}
+.m_bottom-s {
+	margin-bottom: 1rem;
+}
+.m_left-s {
+	margin-left: 1rem;
+}
+.m_right-s {
+	margin-right: 1rem;
+}
+
+.m_vertical-m {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+.m_horizontal-m {
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}
+.m_top-m {
+	margin-top: 1.5rem;
+}
+.m_bottom-m {
+	margin-bottom: 1.5rem;
+}
+.m_left-m {
+	margin-left: 1.5rem;
+}
+.m_right-m {
+	margin-right: 1.5rem;
+}
+
+.m_vertical-l {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.m_horizontal-l {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+.m_top-l {
+	margin-top: 2rem;
+}
+.m_bottom-l {
+	margin-bottom: 2rem;
+}
+.m_left-l {
+	margin-left: 2rem;
+}
+.m_right-l {
+	margin-right: 2rem;
+}
+
+.m_vertical-xl {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+.m_horizontal-xl {
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+.m_top-xl {
+	margin-top: 3rem;
+}
+.m_bottom-xl {
+	margin-bottom: 3rem;
+}
+.m_left-xl {
+	margin-left: 3rem;
+}
+.m_right-xl {
+	margin-right: 3rem;
+}
+
+.m_vertical-xxl {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+.m_horizontal-xxl {
+	margin-left: 4rem;
+	margin-right: 4rem;
+}
+.m_top-xxl {
+	margin-top: 4rem;
+}
+.m_bottom-xxl {
+	margin-bottom: 4rem;
+}
+.m_left-xxl {
+	margin-left: 4rem;
+}
+.m_right-xxl {
+	margin-right: 4rem;
+}
+
+.m_vertical-3xl {
+	margin-top: 6rem;
+	margin-bottom: 6rem;
+}
+.m_horizontal-3xl {
+	margin-left: 6rem;
+	margin-right: 6rem;
+}
+.m_top-3xl {
+	margin-top: 6rem;
+}
+.m_bottom-3xl {
+	margin-bottom: 6rem;
+}
+.m_left-3xl {
+	margin-left: 6rem;
+}
+.m_right-3xl {
+	margin-right: 6rem;
+}
+
+
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* Fade-In animation on page load */
+@keyframes fadeinall {
+	0% {
+		opacity: 1;
+	}
+	97% {
+		opacity: 0;
+	}
+	98% {
+		opacity: 0;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+		z-index: -1;
+	}
+}
+#fadein {
+	opacity: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	background-color: #FFFFFF;
+	z-index: 999;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation: fadeinall 1s normal both;
+	animation: fadeinall 1s normal both;
+	-webkit-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}

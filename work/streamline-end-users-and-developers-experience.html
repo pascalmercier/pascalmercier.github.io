@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pascal Mercier</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link href="https://cdn.jsdelivr.net/npm/modern-normalize@v3.0.1/modern-normalize.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Unbounded:wght@200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../stylesheet/common.css" />
+  <link rel="stylesheet" type="text/css" href="../stylesheet/case-study.css" />
+  <link rel="icon" href="favicon.png">
+  <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QPB9NPQLSD"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-QPB9NPQLSD');
+	</script>
+</head>
+<body>
+  <div id="fadein"></div>
+  <style>
+    
+  </style>
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="logo">Pascal Mercier</a>
+    <section class="menu">
+			<a href="../index.html#value-proposition" class="nav-item" onclick="togglemenu()">Value Proposition</a>
+			<a href="../index.html#about" class="nav-item" onclick="togglemenu()">About</a>
+			<a href="../index.html#work" class="nav-item" onclick="togglemenu()">Work</a>
+			<a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
+				<div class="menu-toggle__bar1"></div>
+				<div class="menu-toggle__bar2"></div>
+				<div class="menu-toggle__bar3"></div>
+			</a>
+		</section>
+  </nav>
+	
+	<section id="hero-section">
+		<div class="m_bottom-m">
+			<a href="../index.html" class="button">← Back</a>
+		</div>
+		<h1 class="m_bottom-m">Streamline End-Users and Developers’ Experience</h1>
+		<div class="categories dark-bg m_bottom-m">
+			<span class="category-item">UX Engineering</span>
+			<span class="category-item">System Architecture</span>
+			<span class="category-item">Prototyping</span>
+		</div>
+		<p class="hero-p">Salesforce provides their sales teams and selling partners with a series of tools that help configuring and customizing product demos in minutes rather than seconds. I led the standardization and scale of said demo tools, both from a UI/UX and a technical perspectives.</p>
+		<p class="hero-p">As an internal engineering team, we developed an innovative omni-channel strategy so users get a seamless experience across their demo environments. We did it by designing and implementing an ecosystem of micro-services on the Salesforce platform that drastically reduced our time to market and allowed for collaboration with other departments of the company, delivering new demo tools at a faster pace.</p>
+		
+		<img src="../img/work/demo-tools.png" alt="Q Tools landing page in Q Home" class="screenshot desktop m_top-xxl"/>
+		<span class="figure-legend">When solution engineers access their Salesforce demo org, they land on a dedicated homepage with all their favorite demo guides and automation tools.</span>
+	</section>
+	<section id="case-study">
+		<article class="m_bottom-xl">
+			<h3><strong>How Might We...</strong></h3>
+			<p>... standardize and scale the creation of productivity solutions and provide demo creators with a centralized experience?</p>
+		</article>
+		<article class="m_bottom-xl">
+			<h3><strong>Approach</strong></h3>
+			<p><strong>Assess</strong> the existing product stack:</p>
+			<ul>
+				<li>a monolithic app the team struggles to maintain with latest technologies;</li>
+				<li>lack of UI/UX standard across tools;</li>
+				<li>integration with Salesforce demo environments is unstable and does not scale with increasing industry variations;</li>
+			</ul>
+			<p><strong>Influence</strong> and align engineering team on new microservices architecture.</p>
+			<p><strong>Develop</strong> custom prototyping platform in NodeJS leveraging Salesforce Lightning Design System components to eliminate redlining and optimize transition from design to code.</p>
+			<p><strong>Enable</strong> demo team on new operational standards.</p>
+		</article>
+		
+		<div class="screenshots">
+			<img src="../img/work/demo-signup_mobile.png" alt="Spin up a new demo instance from a click of a button." class="screenshot mobile"/>
+			<img src="../img/work/fake-gmail-generator_mobile.png" alt="Generate Gmail account on demand and populate it with seed centent." class="screenshot mobile"/>
+			<img src="../img/work/fix-community-users_mobile.png" alt="Community users come out broken from demo org duplication. This app fixes those records." class="screenshot mobile"/>
+		</div>
+		<span class="figure-legend m_bottom-xl">Demo tools serve various purposes. They are designed mobile-first to maximize accessibility for people on the go.</span>
+		
+		<article class="m_bottom-xl">
+			<h3><strong>Outcomes</strong></h3>
+			<ol class="p-list">
+				<li>Streamlined demo customization experience for solution engineers and Salesforce selling partners. Every tools and assets are available directly into the demo environment and are kept up to date regardless of the org lifespan.</li>
+				<li>Universal authentication micro-service allowing to onboard new teams on developing new demo tools and updating existing apps to the ecosystem fast and securely.</li>
+				<li>Scalable and flexible demo tools platform that adapts based on compatibility with various demo environment flavors.</li>
+			</ol>
+		</article>
+		
+		<img src="../img/work/q-messenger-admin.png" alt="Q Messenger admin app for developers" class="screenshot desktop m_top-xxl"/>
+		<span class="figure-legend m_bottom-xl">Centralized messaging system that injects banners and modals into tools on schedule.</span>
+		
+		<article class="m_bottom-xl">
+			<h3><strong>Key Learnings</strong></h3>
+			<ul class="p-list">
+				<li>Adopting an API-first approach is always a safe bet. It ensures flexibility, scalability, and easier integration, creating a robust foundation for long-term growth.</li>
+				<li>Technology diversity can lead to unnecessary dependencies. We learned the hard way that agreeing on a common tech stack as a team enhances maintainability and streamlines development.</li>
+				<li>Scalable design choices are crucial for long-term success. By leveraging a design system and testing early and often, we minimize technical debt and ensure a more sustainable codebase.</li>
+				<li>Opening source code and documenting thoroughly accelerates developer onboarding. Transparent, well-documented code speeds up team integration and fosters a more collaborative, efficient development process.</li>
+			</ul>
+		</article>
+	</section>
+	
+	<section id="contact">
+		<h2><strong>Let's chat</strong>, I’d love to tell you more about it.</h2>
+		
+		<div class="social-handles m_top-l">
+			<a href="mailto:mercier.pas@gmail.com" target="_blank" class="button email">Send an email</a>
+			<a href="https://www.linkedin.com/in/mercierpascal/" target="_blank" class="button linkedin">Connect on LinkedIn</a>
+		</div>
+	</section>
+	
+	<footer>
+		<section>
+			<section class="info">
+				<p>Last updated on April 2025</p>
+				<div class="logo dark-bg">Pascal Mercier</div>
+			</section>
+			<section class="social">
+				<a href="https://www.linkedin.com/in/mercierpascal/" target="_blank">Join me on LinkedIn</a>
+				<a href="mailto:mercier.pas@gmail.com" target="_blank">Send me an email</a>
+				<a href="./Pascal-Mercier_resume_2025.pdf" target="_blank">Download my resume</a>
+			</section>
+			<section class="nav-bis">
+				<a href="../index.html#value-proposition">Value proposition</a>
+				<a href="../index.html#about">About me</a>
+				<a href="../index.html#work">Case studies</a>
+			</section>
+		</section>
+  </footer>
+	
+	
+	<!--[if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: lightgray;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif]-->
+  	
+  <script type="text/javascript" src="../scripts/common.js"></script>
+	<script type="text/javascript" src="../scripts/image-viewer.js"></script>
+</body>
+</html>
