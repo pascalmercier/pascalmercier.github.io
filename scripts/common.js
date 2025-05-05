@@ -9,8 +9,8 @@ function togglemenu() {
 	element.classList.toggle("menu-toggle--open");
 }
 
-//window.onload = function(){
-//	setTimeout(function(){
-//		document.getElementById("fadein").remove();
-//	},1000);
-//};
+window.onload = function(){
+	setTimeout(function(){
+		document.getElementById("fadein").remove();
+	},1000);
+};
