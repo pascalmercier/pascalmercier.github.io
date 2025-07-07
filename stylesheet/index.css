@@ -291,9 +291,8 @@
       28rem 28rem var(--color-porcelaine-blush-25);
   }
 }
+
 #work .shadow-spread {
-  font-size: 6rem;
-  line-height: 0.8em;
   text-shadow:
     7rem 7rem var(--color-porcelaine-blush),
     14rem 14rem var(--color-porcelaine-blush-75),
@@ -305,6 +304,10 @@
   animation-timeline: view(block);
   animation-range: contain 10% contain 90%;
   animation-fill-mode: both;
+}
+#work .shadow-spread > span {
+  font-size: 6rem;
+  line-height: 0.8em;
 }
 #work .shadow-spread .thin-left {
   display: block;
