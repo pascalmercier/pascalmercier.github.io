@@ -55,7 +55,7 @@ function setupZoomableImage(image) {
 		image.style.zIndex = '12';
 		image.style.position = 'relative';
 		image.style.cursor = 'zoom-out';
-		image.style.borderRadius = '0';
+		image.style.borderRadius = '.25rem';
 		isZoomedIn = true;
 		overlay.style.opacity = '1';
 		overlay.style.pointerEvents = '';
@@ -67,6 +67,6 @@ function setupZoomableImage(image) {
 		image.style.transform = '';
 		image.style.cursor = 'zoom-in';
 		image.style.zIndex = '';
-		image.style.borderRadius = '0';
+		image.style.borderRadius = '1rem';
 	}
 }

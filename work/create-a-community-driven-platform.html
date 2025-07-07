@@ -23,16 +23,11 @@
 	</script>
 </head>
 <body>
-  <div id="fadein"></div>
-  <style>
-    
-  </style>
   <nav class="nav" id="nav">
     <a href="/" class="logo">Pascal Mercier</a>
     <section class="menu">
-			<a href="/#value-proposition" class="nav-item" onclick="togglemenu()">Value Proposition</a>
-			<a href="/#about" class="nav-item" onclick="togglemenu()">About</a>
-			<a href="/#work" class="nav-item" onclick="togglemenu()">Work</a>
+      <a href="../Pascal-Mercier_resume_2025.pdf" target="_blank" class="nav-item">Download my resume</a>
+			<a href="https://www.linkedin.com/in/mercierpascal/" target="_blank" class="nav-item">Join me on LinkedIn</a>
 			<a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
 				<div class="menu-toggle__bar1"></div>
 				<div class="menu-toggle__bar2"></div>
@@ -40,113 +35,80 @@
 			</a>
 		</section>
   </nav>
-	
-	<section id="hero-section">
-		<div class="m_bottom-m">
-			<a href="/" class="button">← Back</a>
-		</div>
-		<h1 class="m_bottom-m">Create a Community-Driven Platform</h1>
-		<div class="categories dark-bg m_bottom-m">
-			<span class="category-item">UX Architecture</span>
-			<span class="category-item">Leadership</span>
-			<span class="category-item">Product Strategy</span>
-		</div>
-		<p class="hero-p">The demo components library is an internal marketplace for state-of-the-art business apps and solutions for pre-sales employees to streamline the creation of customer-facing demos of Salesforce products. I coordinated the migration and ground-up revamp of the legacy system with a global team of designers and engineers, transforming it into a dedicated AppExchange-style platform.</p>
-		<p class="hero-p">Historically, demo components were created by a dedicated team of demo engineers and designers and distributed via our internal org standard interface. This initial catalog of assets was hard to navigate for end users. Technically speaking, it was difficult to maintain, challenging to measure the impact on the business. Overall, we had troubles to innovate and scale at the pace of our company.</p>
-		
-		<img src="../img/work/demo-components_homepage.png" alt="Demo Components homepage" class="screenshot desktop m_top-xxl"/>
-		<span class="figure-legend">Demo components homepage is accessible from multiple endpoints, always here when needed.</span>
-	</section>
-	<section id="case-study">
-		<article class="m_bottom-xl">
-			<h3><strong>How Might We...</strong></h3>
-			<p>... enable intuitive and seamless user interaction on demo components, and encourage more contribution amongst Solutions Engineers at Salesforce?</p>
-		</article>
-		<article class="m_bottom-xl">
-			<h3><strong>Approach</strong></h3>
-			<p><strong>Lead</strong> junior design team through research and design. High level steps:</p>
-			<ul>
-				<li>research to uncover strength and limitations of system in place;</li>
-				<li>visual wireframing to validate transformative approach with targeted audience;</li>
-				<li>mobile-first hi-fi design leveraging Salesforce Lightning Design System;</li>
-			</ul>
-			<p><strong>Define</strong> API-first system architecture that surfaces packages from multiple secured endpoints.</p>
-			<p><strong>Develop</strong> custom prototyping platform in NodeJS leveraging Salesforce Lightning Design System components to eliminate redlining and optimize transition from design to code.</p>
-			<p><strong>Implement</strong> componentized UI prototype to enforce UI development standardization best practices.</p>
-		</article>
-		
+  <a href="/" class="button back-button"></a>
+
+	<section id="content">
+		<h1>Behind the Build: Reimagining a Community Platform from the Ground Up</h1>
+		<p><strong>How we created a community-driven hub that empowered users to connect, contribute, and co-create with a playful UX and a scalable foundation, as a team.</strong></p>
+		<p>What do you get when you combine a passion for self-served demo customization, a growing network of Solution Engineers, and an aging platform struggling to keep up? An opportunity. One I embraced as the UX architect, leading a team of junior designers and engineers to reinvent the experience from the ground up—for both creators and consumers of demo components.</p>
+
+		<h2>🤔 Challenge to Solve</h2>
+		<p><strong>How might we offer a user experience that encourages participation, facilitates discovery, and makes contributors feel proud of their involvement?</strong></p>
+		<p>We knew the challenge wasn’t just about features. It was about cultivating a sense of belonging, helping users feel empowered to share their work, discover relevant content, and connect with others in meaningful ways.</p>
+
+		<h2>🥾️ Path to Solution</h2>
+		<h3>Listening First</h3>
+		<p>We started with interviews and community surveys. Creators felt friction at every step: publishing was clunky, profiles were impersonal, and the system didn’t reflect their efforts or foster discovery.</p>
+		<h3>Designing with Roles in Mind</h3>
+		<p>We designed for three core personas:</p>
+		<ul class="p-list">
+		  <li><strong>Contributors</strong> who wanted a smooth way to share and track their work.</li>
+      <li><strong>Visitors</strong> who came to learn, explore, and maybe become contributors themselves.</li>
+      <li><strong>Community Managers</strong> who needed oversight, analytics, and moderation tools.</li>
+    </ul>
+    <img src="../img/work/demo-components_homepage.png" alt="Demo Components homepage" class="screenshot desktop"/>
+		<span class="figure-legend"><strong>New demo components homepage</strong> — Solution Engineers land on a sleek, centralized hub where all demo components and resources are organized for quick, effortless access, setting the stage for smooth demo preparation.</span>
+		<h3>Enhancing Content Accessibility with a Robust API Layer</h3>
+		<p>To enhance scalability and maintainability, we transitioned to a microservices architecture. This allowed individual components to be developed, deployed, and updated independently, fostering innovation and reducing interdependencies.</p>
 		<div class="screenshots">
 			<img src="../img/work/demo-components_detail-page.png" alt="Demo components are described in great details." class="screenshot"/>
 			<img src="../img/work/demo-components_search.png" alt="Advanced search feature" class="screenshot"/>
 		</div>
-		<span class="figure-legend m_bottom-xl">The demo components platform provides many features and a streamlined experience.</span>
-		
-		<article class="m_bottom-xl">
-			<h3><strong>Outcomes</strong></h3>
-			<ol class="p-list">
-				<li>First end-to-end design project at Salesforce for a team of young professionals.</li>
-				<li>Eventual handover of user support and content management to a dedicated team.</li>
-				<li>Metrics a couple of years after launch: 
-					<ul>
-						<li>8.8K+ active users</li>
-						<li>960+ maintained components</li>
-						<li>41K+ component installs</li>
-					</ul>
-				</li>
-			</ol>
-		</article>
-		
-		<img src="../img/work/demo-components_celebration.gif" alt="The creation of new demo components is a celebration" class="screenshot" class="screenshot"/>
-		<span class="figure-legend m_bottom-xl">Interactions are amplified to create an emotional connection with people.</span>
-		
-		<article class="m_bottom-xl">
-			<h3><strong>Key Learnings</strong></h3>
-			<ul class="p-list">
-				<li>Designing mobile-first promotes clarity and simplicity. It forces you to prioritize essential information and structure it in a way that’s easy for users to consume, leading to cleaner, more effective designs.</li>
-				<li>It takes a village to build, launch, support, and evolve a product. Orchestration hinges on strategic alignment—getting the right people moving in the right direction at the right time.</li>
-				<li>Keeping the end user front and center isn’t just a design principle—it’s a critical driver of success. When teams align around user outcomes, decision-making sharpens, priorities become clearer, and products deliver real impact.</li>
-			</ul>
-		</article>
-		
+		<span class="figure-legend"><strong>Demo component detail view and search results on desktop</strong> — Users can dive deep into individual demo components or quickly find what they need using an intuitive search—making exploration and preparation a breeze.</span>
 		<div class="screenshots">
 			<img src="../img/work/demo-components_detail-page_mobile.png" alt="Demo components detail view on mobile" class="screenshot"/>
 			<img src="../img/work/demo-components_created-by-you_mobile.png" alt="demo components creator's page on mobile" class="screenshot"/>
 			<img src="../img/work/demo-components_search_mobile.png" alt="Demo components search page on mobile" class="screenshot"/>
 		</div>
-		<span class="figure-legend m_bottom-xl">The entire marketplace has been designed mobile-first from the ground up.</span>
+		<span class="figure-legend"><strong>Demo component detail view and search results on mobile</strong> — Optimized for on-the-go users, these screens let you explore component details and perform quick searches anytime, anywhere.</span>
+		<h3>Elevating the Community Feel</h3>
+		<p>We focused on micro-interactions and content discovery:</p>
+		<ul class="p-list">
+		  <li>Celebrated contributor profiles.</li>
+			<li>Surfaced most loved and most helpful content.</li>
+			<li>Added commenting, reactions, and content suggestions.</li>
+		</ul>
+		<img src="../img/work/demo-components_celebration.gif" alt="The creation of new demo components is a celebration" class="screenshot"/>
+		<span class="figure-legend"><strong>Celebrating contribution with micro-interactions</strong> — Small but powerful animations and feedback moments that make contributing feel rewarding and engaging, turning everyday actions into delightful experiences.</span>
+
+		<h2>🚀 Outcomes That Speak Volumes</h2>
+		<p>This was our first full end-to-end design project at Salesforce, led by a young, dynamic team hungry for impact. The results? Clear and compelling:</p>
+		<ul class="p-list">
+		  <li><strong>Doubled contributor engagement within just two months</strong>, fueling the growth of a vibrant platform with <strong>over 8,800 active users</strong>, each one empowered to share, explore, and build more effectively.</li>
+			<li><strong>Reduced content publishing time by 40%</strong>, streamlining workflows and automating moderation to get high-quality components out the door faster.</li>
+			<li><strong>Increased content discoverability by 60%</strong>, thanks to improved search engine and a cleaner content structure which helped drive over 41,000 component installs just a couple years in.</li>
+			<li><strong>Reduced content management overhead significantly</strong>, empowering the newly formed support team with moderation tools and automation keeping <strong>960+ components actively maintained</strong> without burning out the folks behind the scenes.</li>
+		</ul>
+
+		<h2>📚 Key Learnings</h2>
+		<ul class="p-list">
+		  <li><strong>Designing mobile-first promotes clarity and simplicity.</strong> It highlights essential information and naturally leads to structures that are easier for users to navigate, resulting in cleaner, more effective designs.</li>
+			<li><strong>It takes a village to build, launch, support, and evolve a product.</strong> Orchestration hinges on strategic alignment getting the right people moving in the right direction at the right time.</li>
+			<li><strong>Keeping the end user front and center isn’t just a design principle, it’s a critical driver of success.</strong> When teams align around user outcomes, decision-making sharpens, priorities become clearer, and products deliver real impact.</li>
+		</ul>
+
+		<h2>🧩 Final Thoughts</h2>
+		<p>Building this platform wasn’t just a technical upgrade. It was about turning a quiet content site into a buzzing digital town square. It worked because we put the community first and gave them the tools to thrive.</p>
 	</section>
-	
-	<section id="contact">
-		<h2><strong>Let's chat</strong>, I’d love to tell you more about it.</h2>
-		
-		<div class="social-handles m_top-l">
-			<a href="mailto:mercier.pas@gmail.com" target="_blank" class="button email">Send an email</a>
-			<a href="https://www.linkedin.com/in/mercierpascal/" target="_blank" class="button linkedin">Connect on LinkedIn</a>
-		</div>
-	</section>
-	
-	<footer>
-		<section>
-			<section class="info">
-				<p>Last updated on April 2025</p>
-				<div class="logo dark-bg">Pascal Mercier</div>
-			</section>
-			<section class="social">
-				<a href="https://www.linkedin.com/in/mercierpascal/" target="_blank">Join me on LinkedIn</a>
-				<a href="mailto:mercier.pas@gmail.com" target="_blank">Send me an email</a>
-				<a href="./Pascal-Mercier_resume_2025.pdf" target="_blank">Download my resume</a>
-			</section>
-			<section class="nav-bis">
-				<a href="/#value-proposition">Value proposition</a>
-				<a href="/#about">About me</a>
-				<a href="/#work">Case studies</a>
-			</section>
-		</section>
+
+	<footer id="page-footer">
+	  <span class="tooltip hidden">"mercier.pas@gmail.com" copied to clipboard!</span>
+		<a href="mailto:mercier.pas@gmail.com" onclick="copyemail(event)">Let's chat!</a>
   </footer>
-	
-	
+
+
 	<!--[if IE]><div style="width: 100%; position: fixed; z-index: 1000; bottom: 0; left: 0; background: lightgray;"><p>Outdated browser dectected. Please use a modern browser for a better browsing experience.</p><div onClick="parentNode.remove()">Close [X]</div></div><![endif]-->
-  	
+
   <script type="text/javascript" src="../scripts/common.js"></script>
 	<script type="text/javascript" src="../scripts/image-viewer.js"></script>
 </body>

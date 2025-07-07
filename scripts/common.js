@@ -9,8 +9,14 @@ function togglemenu() {
 	element.classList.toggle("menu-toggle--open");
 }
 
-window.onload = function(){
-	setTimeout(function(){
-		document.getElementById("fadein").remove();
-	},1000);
-};
+function copyemail(e) {
+  var e = e || window.event;
+  e.preventDefault();
+  e.stopPropagation();
+  navigator.clipboard.writeText('mercier.pas@gmail.com');
+  var tooltip = document.querySelector("#page-footer .tooltip");
+  tooltip.classList.toggle("hidden");
+  setTimeout(() => {
+    tooltip.classList.toggle("hidden");
+  }, 3000);
+}
