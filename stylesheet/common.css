@@ -388,6 +388,12 @@ p .quote {
 		display: block;
 	}
 
+	#page-footer a {
+    font-size: 16vw;
+  }
+  #page-footer a::after {
+    margin-top: -1rem;
+  }
 	#page-footer a::after {
     content: 'Tap to copy my email address.';
   }

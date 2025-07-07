@@ -364,6 +364,7 @@
     transform: rotate(90deg) translateX(-16rem);
     right: auto;
     left: 0;
+    width: max-content;
   }
   @keyframes shadow-splash-animation {
     0% {
@@ -519,11 +520,5 @@
   #work .media .media_body h2,
   #work .media .media_body p {
     margin-bottom: 1rem;
-  }
-  #page-footer a {
-    font-size: 4rem;
-  }
-  #page-footer a::after {
-    margin-top: -1rem;
   }
 }
