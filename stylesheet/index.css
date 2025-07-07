@@ -410,7 +410,6 @@
   }
   .references .ref-item,
   .ref-item.primary-ref {
-      flex-basis: max-content;
       flex-grow: 1;
       flex-shrink: 1;
   }
