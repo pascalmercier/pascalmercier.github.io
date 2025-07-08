@@ -339,6 +339,12 @@ p .quote {
 	  font-size: 1.125rem;
 	}
 
+  .button {
+    transition-property: none;
+    box-shadow: .25rem -.25rem 0 0 black;
+    transform: translate(-.25rem, .25rem);
+  }
+
 	.nav {
 	  /* padding: 1rem 0 1rem 1.5rem; */
 	}
@@ -355,7 +361,15 @@ p .quote {
 		display: none;
 		border-left: 0;
 		border-top: 2px solid black;
+    transition-delay: 0s, 0s, 0s, 0s;
+    transition-duration: 0s;
 	}
+	.nav .nav-item:hover {
+    border: 0;
+		border-top: 2px solid black;
+    box-shadow: 0 0 0 0 black;
+    transform: translate(0, 0);
+  }
 	.nav a#menu-toggle {
 		display: block;
 		height: 3.875rem;
